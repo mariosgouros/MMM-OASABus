@@ -1,0 +1,132 @@
+/* MMM-OASABus.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.oasa-bus-wrapper {
+  font-family: 'Roboto', sans-serif;
+  color: #e0e8f0;
+  padding: 10px 14px;
+  min-width: 0;
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* ── Stop row — "Stop:" grey, name white ── */
+.oasa-stop {
+  font-size: 0.78em;
+  font-weight: 300;
+  color: rgb(153,153,153);
+  letter-spacing: 0.05em;
+  margin-bottom: 7px;
+}
+.oasa-stop-name {
+  color: rgb(255,255,255);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* ── Divider ── */
+.oasa-divider {
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,0.2), transparent);
+  margin: 0 0 7px 0;
+}
+
+/* ── "Next Arrivals" header — grey ── */
+.oasa-arrivals-header {
+  font-size: 0.68em;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgb(153,153,153);
+  margin-bottom: 6px;
+}
+
+/* ── Arrivals list ── */
+.oasa-arrivals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.oasa-arrival-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* ── Line badge — bus: solid blue ── */
+.oasa-line-id {
+  font-size: 0.82em;
+  font-weight: 700;
+  color: rgb(255,255,255);
+  background: rgb(0,51,255);
+  padding: 2px 6px;
+  border-radius: 3px;
+  min-width: 36px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+/* ── Line badge — trolleybus: solid amber ── */
+.oasa-line-id.oasa-trolley {
+  background: rgb(255,162,0);
+}
+
+/* ── Route description — white ── */
+.oasa-route-descr {
+  flex: 1;
+  font-size: 0.78em;
+  font-weight: 400;
+  color: rgb(255,255,255);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Arrival time — "in" grey, number yellow ── */
+.oasa-btime {
+  font-size: 0.75em;
+  font-weight: 300;
+  color: rgb(153,153,153);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.oasa-btime strong {
+  color: rgb(255,234,0);
+  font-weight: 700;
+  font-size: 1.15em;
+}
+
+/* ── States ── */
+.oasa-loading,
+.oasa-no-arrivals {
+  font-size: 0.78em;
+  font-weight: 300;
+  color: rgb(153,153,153);
+  font-style: italic;
+  padding: 6px 0;
+  letter-spacing: 0.05em;
+}
+.oasa-error {
+  color: #ff6655;
+  font-size: 0.78em;
+  padding: 6px 0;
+  letter-spacing: 0.04em;
+}
+
+/* ════════════════════════════════
+   COMPACT MODE
+   only hides route description —
+   stop, divider and header remain
+   ════════════════════════════════ */
+.oasa-compact .oasa-route-descr { display: none; }
+.oasa-compact .oasa-arrival-row { padding: 4px 7px; }
+.oasa-compact .oasa-line-id     { font-size: 0.78em; min-width: 30px; }
+.oasa-compact .oasa-btime       { font-size: 0.72em; margin-left: auto; }
