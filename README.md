@@ -98,30 +98,11 @@ No configuration is needed for this feature.
 
 ## Finding your StopCode
 
-The `stopCode` is the key piece of information needed to configure the module. Here are three ways to find it:
+The `stopCode` is the key piece of information needed to configure the module. Here is the easiest way to find it:
 
-**Option 1 — OASA Telematics website**
-Visit [telematics.oasa.gr](https://telematics.oasa.gr) and find your stop on the map. The stop code is shown in the stop info panel.
-
-**Option 2 — Direct API lookup**
-If you know a route that serves your stop, list all stops on that route:
-```
-https://telematics.oasa.gr/api/?act=webGetStops&p1={RouteCode}
-```
-Find your stop by name and note the `StopCode` field.
-
-**Option 3 — Browse stops for your area**
-Get routes for any line:
-```
-https://telematics.oasa.gr/api/?act=webGetRoutes&p1={LineCode}
-```
-Then fetch stops for a route code from that response.
-
-Once you have the code you can verify it directly:
-```
-https://telematics.oasa.gr/api/?act=getStopNameAndXY&p1={StopCode}
-```
-This returns the stop name and coordinates confirming it is the correct stop.
+From the official OASA website [telematics.oasa.gr](https://telematics.oasa.gr), under the "Stop Info" tab, select "Choose Line" e.g., 040, 
+then select "Route" e.g., "SYNTAGMA-PEIRAIAS", and finally select "Stop" e.g., "PYROSBESTIKH". The stop code will now appear e.g., 240082, 
+which you have to enter as a required value in module's config. Note: a different code is required for inbound and a different one for outbound.
 
 ---
 
