@@ -43,6 +43,17 @@ No additional dependencies required.
 
 ---
 
+## Update
+
+```bash
+cd ~/MagicMirror/modules/MMM-OASABus
+git pull
+```
+
+Then restart MagicMirror. No `npm install` is needed, because the module has no dependencies.
+
+---
+
 ## Configuration
 
 Add the following block to your `config/config.js` inside the `modules` array:
