@@ -1,0 +1,22 @@
+{
+  "name": "mmm-oasabus",
+  "version": "1.1.0",
+  "description": "MagicMirror² module showing live bus and trolleybus arrivals for Athens (OASA Telematics API).",
+  "main": "MMM-OASABus.js",
+  "repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/mariosgouros/MMM-OASABus"
+  },
+  "keywords": [
+    "MagicMirror",
+    "module",
+    "OASA",
+    "Athens",
+    "bus",
+    "trolleybus",
+    "public transport"
+  ],
+  "author": "MSg",
+  "homepage": "https://github.com/mariosgouros/MMM-OASABus#readme",
+  "license": "MIT"
+}
