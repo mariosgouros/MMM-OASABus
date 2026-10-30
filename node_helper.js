@@ -1,5 +1,5 @@
 var NodeHelper = require("node_helper");
-var https = require("https");
+var https = require("node:https");
 
 module.exports = NodeHelper.create({
   start: function () {
@@ -29,7 +29,7 @@ module.exports = NodeHelper.create({
       res.on("data", function (chunk) { data += chunk; });
       res.on("end", function () {
         try { callback(null, JSON.parse(data)); }
-        catch (e) { callback(null, null); }
+        catch { callback(null, null); }
       });
     });
     req.setTimeout(10000, function () {
@@ -79,7 +79,6 @@ module.exports = NodeHelper.create({
 
   buildRouteMap: function (callback) {
     var self = this;
-    var cfg = self.config;
 
     self.fetchJSON("https://telematics.oasa.gr/api/?act=webRoutesForStop&p1=" + self.stopCode, function (err, routes) {
       if (err || !routes) {
